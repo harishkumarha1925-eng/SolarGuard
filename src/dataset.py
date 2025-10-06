@@ -13,12 +13,11 @@ def get_transforms(size=224, train=True):
             transforms.ToTensor(),
             transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225]),
         ])
-    else:
-        return transforms.Compose([
-            transforms.Resize((size,size)),
-            transforms.ToTensor(),
-            transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225]),
-        ])
+    return transforms.Compose([
+        transforms.Resize((size,size)),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225]),
+    ])
 
 def make_dataloaders(train_dir, val_dir, batch_size=32, size=224, num_workers=4):
     train_ds = ImageFolder(train_dir, transform=get_transforms(size, True))

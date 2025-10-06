@@ -1,21 +1,8 @@
-# Core
-streamlit>=1.24.0
-
-# PyTorch (recommended to install CPU wheels locally using the pip command above)
-torch
-torchvision
-
-# Training helpers
-scikit-learn
+streamlit>=1.25.0
 pillow
-tqdm
-
-# Optional: faster augmentations (only if you use it)
-albumentations
-
-# Optional detection
-ultralytics   # YOLOv8 (only if you want detection)
-
-# Useful plotting / dev
-matplotlib
+numpy
+onnxruntime
+scikit-learn
 pandas
+matplotlib
+tqdm
